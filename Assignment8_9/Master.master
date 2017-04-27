@@ -1,0 +1,51 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Master.master.cs" Inherits="Assignment8_9.Master" %>
+
+<!DOCTYPE html>
+<link href="StyleSheet1.css" rel="Stylesheet" type="text/css" />
+<link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Merienda+One' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<head runat="server">
+    <title>Julianne Messenger Photography</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+    <div id="main_container">
+        <asp:Image ID="Image1" runat="server" ImageUrl="images/lace.jpg"/>
+        <div id="PageTitle">
+            <h1>Julianne Messenger Photography</h1>
+        </div>
+        <div id="navigator">
+            <ul id="navigation">
+                <li><a href="Home.aspx">Home</a></li>
+                <li><a href="Gallery.aspx">Photo Gallery</a></li>
+                <li><a href="Sessions.aspx">Schedule Session</a></li>
+                <li><a href="Contact.aspx">Contact Info</a></li>
+                <li class="social"><a href="https://www.facebook.com/Julianne-Messenger-Photography-210354485755572/" target="_blank"><img id="fb" src="images/facebook.png"/></a></li>
+            </ul>
+        </div>
+        
+        <div id="content">
+            <asp:UpdatePanel runat="server" ID="updatePanel1">
+                <ContentTemplate>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </ContentTemplate>
+            </asp:UpdatePanel>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+            </asp:ContentPlaceHolder>
+                   
+        </div>
+            
+        <div id="footer">
+            <p>All Rights Reserved. </p>
+        </div>
+    </div>
+    </form>
+</body>
